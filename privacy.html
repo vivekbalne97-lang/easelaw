@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Privacy Policy - EaseLaw</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+
+  background:
+  linear-gradient(
+    180deg,
+    #f8f5ff,
+    #ffffff
+  );
+
+  color:#111827;
+
+  line-height:1.8;
+
+  overflow-x:hidden;
+
+  position:relative;
+
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+
+  width:420px;
+  height:420px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(124,58,237,0.14),
+    transparent 70%
+  );
+
+  top:-120px;
+  right:-100px;
+
+  filter:blur(60px);
+
+  z-index:-1;
+
+}
+
+body::after{
+
+  content:"";
+
+  position:fixed;
+
+  width:380px;
+  height:380px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(99,102,241,0.10),
+    transparent 70%
+  );
+
+  bottom:-100px;
+  left:-100px;
+
+  filter:blur(60px);
+
+  z-index:-1;
+
+}
+
+a{
+  text-decoration:none;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+
+  width:100%;
+
+  padding:22px 8%;
+
+  background:
+  rgba(206, 213, 240, 0.92);
+
+  backdrop-filter:blur(18px);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+
+  border-bottom:
+  1px solid rgba(124,58,237,0.08);
+
+  box-shadow:
+  0 10px 30px rgba(124,58,237,0.05);
+
+}
+
+/* LOGO */
+
+.logo{
+
+  font-size:34px;
+
+  font-weight:900;
+
+  color:#111827;
+
+}
+
+.logo span{
+
+  color:#7c3aed;
+
+}
+
+/* BUTTON */
+
+.back-btn{
+
+  padding:13px 24px;
+
+  border-radius:16px;
+
+  border:
+  1px solid rgba(124,58,237,0.10);
+
+  background:
+  rgba(255,255,255,0.88);
+
+  color:#111827;
+
+  font-weight:700;
+
+  transition:0.35s ease;
+
+}
+
+.back-btn:hover{
+
+  border-color:#7c3aed;
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 14px 24px rgba(124,58,237,0.12);
+
+  color:#7c3aed;
+
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+  padding:100px 8% 70px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #0f172a,
+    #111827,
+    #1e1b4b
+  );
+
+  color:white;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+/* HERO GLOW */
+
+.hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:360px;
+  height:360px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(124,58,237,0.18),
+    transparent 70%
+  );
+
+  top:-120px;
+  right:-120px;
+
+  filter:blur(30px);
+
+}
+
+.hero::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:260px;
+  height:260px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(99,102,241,0.14),
+    transparent 70%
+  );
+
+  bottom:-100px;
+  left:-100px;
+
+  filter:blur(20px);
+
+}
+
+/* TITLE */
+
+.hero h1{
+
+  position:relative;
+
+  z-index:2;
+
+  font-size:68px;
+
+  margin-bottom:22px;
+
+  font-weight:900;
+
+}
+
+.hero h1 span{
+
+  background:
+  linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6366f1
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+}
+
+/* TEXT */
+
+.hero p{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:850px;
+
+  color:#d1d5db;
+
+  font-size:19px;
+
+  line-height:1.9;
+
+}
+
+/* =========================
+POLICY SECTION
+========================= */
+
+.policy-container{
+
+  width:100%;
+
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:90px 20px;
+
+  margin-top:-70px;
+
+  position:relative;
+
+  z-index:5;
+
+}
+
+/* CARD */
+
+.policy-card{
+
+  background:
+  rgba(255,255,255,0.88);
+
+  backdrop-filter:blur(20px);
+
+  padding:60px;
+
+  border-radius:34px;
+
+  border:
+  1px solid rgba(124,58,237,0.08);
+
+  box-shadow:
+  0 30px 60px rgba(124,58,237,0.08);
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+/* GLOW */
+
+.policy-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:240px;
+  height:240px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(139,92,246,0.12),
+    transparent 70%
+  );
+
+  top:-80px;
+  right:-80px;
+
+}
+
+/* H2 */
+
+.policy-card h2{
+
+  font-size:32px;
+
+  margin-top:50px;
+
+  margin-bottom:20px;
+
+  color:#111827;
+
+  font-weight:900;
+
+}
+
+.policy-card h2:first-child{
+
+  margin-top:0;
+
+}
+
+/* H3 */
+
+.policy-card h3{
+
+  margin-top:28px;
+
+  margin-bottom:14px;
+
+  color:#7c3aed;
+
+  font-size:22px;
+
+  font-weight:800;
+
+}
+
+/* TEXT */
+
+.policy-card p{
+
+  color:#475569;
+
+  font-size:16px;
+
+  margin-bottom:20px;
+
+  line-height:1.9;
+
+}
+
+/* LIST */
+
+.policy-card ul{
+
+  padding-left:24px;
+
+  margin-bottom:28px;
+
+}
+
+.policy-card ul li{
+
+  margin-bottom:14px;
+
+  color:#475569;
+
+  line-height:1.8;
+
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(124,58,237,0.08),
+    rgba(255,255,255,0.9)
+  );
+
+  border:
+  1px solid rgba(124,58,237,0.12);
+
+  padding:24px;
+
+  border-radius:22px;
+
+  margin-top:28px;
+
+  color:#5b21b6;
+
+  font-weight:600;
+
+  line-height:1.9;
+
+}
+
+/* FOOTER */
+
+footer{
+
+  background:
+  linear-gradient(
+    135deg,
+    #020617,
+    #111827
+  );
+
+  color:white;
+
+  text-align:center;
+
+  padding:60px 8%;
+
+  margin-top:80px;
+
+  border-top:
+  1px solid rgba(124,58,237,0.12);
+
+}
+
+footer h2{
+
+  font-size:34px;
+
+  margin-bottom:14px;
+
+}
+
+footer p{
+
+  color:#94a3b8;
+
+  line-height:1.9;
+
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:768px){
+
+body{
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    padding:16px 5%;
+
+}
+
+.logo{
+
+    font-size:24px;
+
+}
+
+.back-btn{
+
+    padding:10px 16px;
+
+    font-size:13px;
+
+    border-radius:14px;
+
+}
+
+/* HERO */
+
+.hero{
+
+    padding:70px 5% 120px;
+
+}
+
+.hero h1{
+
+    font-size:40px;
+
+    line-height:1.15;
+
+    margin-bottom:16px;
+
+}
+
+.hero p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+/* POLICY SECTION */
+
+.policy-container{
+
+    padding:0 15px 50px;
+
+    margin-top:-70px;
+
+}
+
+/* CARD */
+
+.policy-card{
+
+    padding:28px 22px;
+
+    border-radius:28px;
+
+}
+
+/* H2 */
+
+.policy-card h2{
+
+    font-size:24px;
+
+    margin-top:35px;
+
+    margin-bottom:16px;
+
+}
+
+/* H3 */
+
+.policy-card h3{
+
+    font-size:18px;
+
+    margin-top:24px;
+
+}
+
+/* PARAGRAPH */
+
+.policy-card p{
+
+    font-size:14px;
+
+    line-height:1.9;
+
+}
+
+/* LIST */
+
+.policy-card ul{
+
+    padding-left:18px;
+
+}
+
+.policy-card ul li{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    margin-bottom:10px;
+
+}
+
+/* HIGHLIGHT BOX */
+
+.highlight{
+
+    padding:18px;
+
+    border-radius:18px;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+/* FOOTER */
+
+footer{
+
+    padding:50px 5%;
+
+}
+
+footer h2{
+
+    font-size:28px;
+
+}
+
+footer p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+}
+
+
+/* =====================================
+SMALL PHONES
+===================================== */
+
+@media screen and (max-width:480px){
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+}
+
+.back-btn{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.hero{
+
+    padding:60px 5% 100px;
+
+}
+
+.hero h1{
+
+    font-size:32px;
+
+}
+
+.hero p{
+
+    font-size:14px;
+
+}
+
+.policy-container{
+
+    margin-top:-55px;
+
+}
+
+.policy-card{
+
+    padding:22px 18px;
+
+}
+
+.policy-card h2{
+
+    font-size:21px;
+
+}
+
+.policy-card h3{
+
+    font-size:17px;
+
+}
+
+.policy-card p,
+.policy-card ul li{
+
+    font-size:13px;
+
+}
+
+.highlight{
+
+    padding:16px;
+
+    font-size:13px;
+
+}
+
+footer h2{
+
+    font-size:24px;
+
+}
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+    <div class="logo">
+      Ease<span>Law</span>
+    </div>
+
+    <a href="index.html" class="back-btn">
+      ← Back to Home
+    </a>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>
+      Privacy Policy
+    </h1>
+
+    <p>
+      Your privacy matters to us. This policy explains how EaseLaw.in collects, uses, and protects your information.
+    </p>
+
+  </section>
+
+  <!-- CONTENT -->
+
+  <section class="policy-container">
+
+    <div class="policy-card">
+
+      <h2>Introduction</h2>
+
+      <p>
+        EaseLaw.in ("we" or "us") respects your privacy and is committed to protecting your personal information.
+        This Privacy Policy explains how we collect, use, and disclose your information when you visit our website and use our services.
+      </p>
+
+      <h2>1. Information We Collect</h2>
+
+      <p>
+        We collect the following types of data from users:
+      </p>
+
+      <h3>A. Personal Information (Provided by You)</h3>
+
+      <ul>
+        <li>Name</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+        <li>Uploaded documents</li>
+        <li>Details entered in forms and drafting tools</li>
+        <li>Payment-related information via Razorpay/PayU</li>
+      </ul>
+
+      <h3>B. Automatically Collected Information</h3>
+
+      <ul>
+        <li>IP address</li>
+        <li>Browser and device type</li>
+        <li>Operating system</li>
+        <li>Usage activity and logs</li>
+        <li>Cookie identifiers</li>
+        <li>Pages visited</li>
+        <li>Session duration</li>
+      </ul>
+
+      <h3>C. AI Processing Data</h3>
+
+      <ul>
+        <li>Uploaded text and documents</li>
+        <li>Information entered into templates</li>
+        <li>Chat inputs sent to AI systems</li>
+      </ul>
+
+      <h2>2. How We Use Your Information</h2>
+
+      <ul>
+        <li>Providing AI-based legal drafting tools</li>
+        <li>Improving document accuracy</li>
+        <li>Processing payments</li>
+        <li>Offering customer support</li>
+        <li>Preventing fraudulent activity</li>
+        <li>Enhancing platform security</li>
+        <li>Internal analytics and improvements</li>
+      </ul>
+
+      <h2>3. How Your Data Is Stored & Protected</h2>
+
+      <p>
+        Data is stored on secure servers with encryption and strict access controls.
+      </p>
+
+      <div class="highlight">
+        Payment information is not stored by EaseLaw.in and is securely processed through trusted payment gateways.
+      </div>
+
+      <h2>4. Sharing of Information</h2>
+
+      <h3>A. Third-Party Service Providers</h3>
+
+      <ul>
+        <li>Razorpay / PayU</li>
+        <li>Google Cloud providers</li>
+        <li>Analytics systems</li>
+        <li>AI model providers</li>
+        <li>Communication services</li>
+      </ul>
+
+      <h3>B. Legal Requirements</h3>
+
+      <p>
+        We may disclose information if legally required by courts, law enforcement, or government authorities.
+      </p>
+
+      <h2>5. Cookies & Tracking Technology</h2>
+
+      <ul>
+        <li>Improve loading speed</li>
+        <li>Remember login sessions</li>
+        <li>Enable functionality</li>
+        <li>Track analytics</li>
+      </ul>
+
+      <h2>6. User Rights</h2>
+
+      <ul>
+        <li>Request deletion of personal data</li>
+        <li>Request copies of stored data</li>
+        <li>Correct inaccurate information</li>
+        <li>Opt out of non-essential notifications</li>
+      </ul>
+
+      <h2>7. Data Retention</h2>
+
+      <p>
+        We retain data only as long as necessary for providing services or complying with legal obligations.
+      </p>
+
+      <h2>8. Children’s Privacy</h2>
+
+      <p>
+        EaseLaw.in is not intended for individuals below 18 years of age.
+      </p>
+
+      <h2>9. Third-Party Links</h2>
+
+      <p>
+        Our website may contain links to external websites. We are not responsible for their privacy practices.
+      </p>
+
+      <h2>10. Security Limitations</h2>
+
+      <p>
+        While we take strong security measures, no system can guarantee complete protection from cyberattacks or technical failures.
+      </p>
+
+      <h2>11. Changes to This Policy</h2>
+
+      <p>
+        EaseLaw.in may update this Privacy Policy occasionally.
+      </p>
+
+      <h2>Contact Us</h2>
+
+      <p>
+        📩 easelawindia@gmail.com
+      </p>
+
+      <div class="highlight">
+        This Privacy Policy forms an important part of our Terms & Conditions.
+        Please review both carefully before using EaseLaw.in.
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>EaseLaw</h2>
+
+    <p>
+      AI-powered legal workspace designed
+      for modern advocates and legal professionals.
+    </p>
+
+    <p style="margin-top:20px;">
+      © 2026 Shantaquant All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+
+</html>

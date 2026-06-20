@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Terms & Conditions - EaseLaw</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+   *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+
+  background:
+  linear-gradient(
+    180deg,
+    #f8f5ff,
+    #ffffff
+  );
+
+  color:#111827;
+
+  line-height:1.8;
+
+  overflow-x:hidden;
+
+  position:relative;
+
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+
+  width:420px;
+  height:420px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(124,58,237,0.14),
+    transparent 70%
+  );
+
+  top:-120px;
+  right:-100px;
+
+  filter:blur(60px);
+
+  z-index:-1;
+
+}
+
+body::after{
+
+  content:"";
+
+  position:fixed;
+
+  width:380px;
+  height:380px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(99,102,241,0.10),
+    transparent 70%
+  );
+
+  bottom:-100px;
+  left:-100px;
+
+  filter:blur(60px);
+
+  z-index:-1;
+
+}
+
+a{
+  text-decoration:none;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+
+  width:100%;
+
+  padding:22px 8%;
+
+  background:
+  rgba(206, 213, 240, 0.92);
+
+  backdrop-filter:blur(18px);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+
+  border-bottom:
+  1px solid rgba(124,58,237,0.08);
+
+  box-shadow:
+  0 10px 30px rgba(124,58,237,0.05);
+
+}
+
+/* LOGO */
+
+.logo{
+
+  font-size:34px;
+
+  font-weight:900;
+
+  color:#111827;
+
+}
+
+.logo span{
+
+  color:#7c3aed;
+
+}
+
+/* BUTTON */
+
+.back-btn{
+
+  padding:13px 24px;
+
+  border-radius:16px;
+
+  border:
+  1px solid rgba(124,58,237,0.10);
+
+  background:
+  rgba(255,255,255,0.88);
+
+  color:#111827;
+
+  font-weight:700;
+
+  transition:0.35s ease;
+
+}
+
+.back-btn:hover{
+
+  border-color:#7c3aed;
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 14px 24px rgba(124,58,237,0.12);
+
+  color:#7c3aed;
+
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+  padding:100px 8% 70px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #0f172a,
+    #111827,
+    #1e1b4b
+  );
+
+  color:white;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+/* HERO GLOW */
+
+.hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:360px;
+  height:360px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(124,58,237,0.18),
+    transparent 70%
+  );
+
+  top:-120px;
+  right:-120px;
+
+  filter:blur(30px);
+
+}
+
+.hero::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:260px;
+  height:260px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(99,102,241,0.14),
+    transparent 70%
+  );
+
+  bottom:-100px;
+  left:-100px;
+
+  filter:blur(20px);
+
+}
+
+/* TITLE */
+
+.hero h1{
+
+  position:relative;
+
+  z-index:2;
+
+  font-size:68px;
+
+  margin-bottom:22px;
+
+  font-weight:900;
+
+}
+
+.hero h1 span{
+
+  background:
+  linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6366f1
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+}
+
+/* TEXT */
+
+.hero p{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:850px;
+
+  color:#d1d5db;
+
+  font-size:19px;
+
+  line-height:1.9;
+
+}
+
+/* =========================
+TERMS SECTION
+========================= */
+
+.terms-container{
+
+  width:100%;
+
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:90px 20px;
+
+  margin-top:-70px;
+
+  position:relative;
+
+  z-index:5;
+
+}
+
+/* CARD */
+
+.terms-card{
+
+  background:
+  rgba(255,255,255,0.88);
+
+  backdrop-filter:blur(20px);
+
+  padding:60px;
+
+  border-radius:34px;
+
+  border:
+  1px solid rgba(124,58,237,0.08);
+
+  box-shadow:
+  0 30px 60px rgba(124,58,237,0.08);
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+/* GLOW */
+
+.terms-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:240px;
+  height:240px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(139,92,246,0.12),
+    transparent 70%
+  );
+
+  top:-80px;
+  right:-80px;
+
+}
+
+/* H2 */
+
+.terms-card h2{
+
+  font-size:32px;
+
+  margin-top:50px;
+
+  margin-bottom:20px;
+
+  color:#111827;
+
+  font-weight:900;
+
+}
+
+.terms-card h2:first-child{
+
+  margin-top:0;
+
+}
+
+/* TEXT */
+
+.terms-card p{
+
+  color:#475569;
+
+  font-size:16px;
+
+  margin-bottom:20px;
+
+  line-height:1.9;
+
+}
+
+/* LIST */
+
+.terms-card ul{
+
+  padding-left:24px;
+
+  margin-bottom:28px;
+
+}
+
+.terms-card ul li{
+
+  margin-bottom:14px;
+
+  color:#475569;
+
+  line-height:1.8;
+
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(124,58,237,0.08),
+    rgba(255,255,255,0.9)
+  );
+
+  border:
+  1px solid rgba(124,58,237,0.12);
+
+  padding:24px;
+
+  border-radius:22px;
+
+  margin-top:28px;
+
+  color:#5b21b6;
+
+  font-weight:600;
+
+  line-height:1.9;
+
+}
+
+/* FOOTER */
+
+footer{
+
+  background:
+  linear-gradient(
+    135deg,
+    #020617,
+    #111827
+  );
+
+  color:white;
+
+  text-align:center;
+
+  padding:60px 8%;
+
+  margin-top:80px;
+
+  border-top:
+  1px solid rgba(124,58,237,0.12);
+
+}
+
+footer h2{
+
+  font-size:34px;
+
+  margin-bottom:14px;
+
+}
+
+footer p{
+
+  color:#94a3b8;
+
+  line-height:1.9;
+
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:768px){
+
+body{
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    padding:16px 5%;
+}
+
+.logo{
+    font-size:24px;
+}
+
+.back-btn{
+    padding:10px 16px;
+    font-size:13px;
+    border-radius:14px;
+}
+
+/* HERO */
+
+.hero{
+    padding:70px 5% 120px;
+}
+
+.hero h1{
+    font-size:40px;
+    line-height:1.15;
+    margin-bottom:16px;
+}
+
+.hero p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+/* TERMS SECTION */
+
+.terms-container{
+    padding:0 15px 50px;
+    margin-top:-70px;
+}
+
+/* CARD */
+
+.terms-card{
+    padding:28px 22px;
+    border-radius:28px;
+}
+
+/* HEADINGS */
+
+.terms-card h2{
+    font-size:24px;
+    margin-top:35px;
+    margin-bottom:16px;
+}
+
+/* PARAGRAPH */
+
+.terms-card p{
+    font-size:14px;
+    line-height:1.9;
+}
+
+/* LIST */
+
+.terms-card ul{
+    padding-left:18px;
+}
+
+.terms-card ul li{
+    font-size:14px;
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+/* HIGHLIGHT BOX */
+
+.highlight{
+
+    padding:18px;
+
+    border-radius:18px;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px 5%;
+}
+
+footer h2{
+    font-size:28px;
+}
+
+footer p{
+    font-size:14px;
+    line-height:1.8;
+}
+
+}
+
+/* =====================================
+SMALL PHONES
+===================================== */
+
+@media screen and (max-width:480px){
+
+.navbar{
+    flex-direction:column;
+    gap:14px;
+}
+
+.logo{
+    font-size:22px;
+}
+
+.back-btn{
+    width:100%;
+    text-align:center;
+}
+
+.hero{
+    padding:60px 5% 100px;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+.terms-container{
+    margin-top:-55px;
+}
+
+.terms-card{
+    padding:22px 18px;
+}
+
+.terms-card h2{
+    font-size:21px;
+}
+
+.terms-card p,
+.terms-card ul li{
+    font-size:13px;
+}
+
+.highlight{
+    padding:16px;
+    font-size:13px;
+}
+
+footer h2{
+    font-size:24px;
+}
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+    <div class="logo">
+      Ease<span>Law</span>
+    </div>
+
+    <a href="index.html" class="back-btn">
+      ← Back to Home
+    </a>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>
+      Terms & Conditions
+    </h1>
+
+    <p>
+      Please read these Terms carefully before using EaseLaw.in.
+      By accessing our platform, you agree to comply with these Terms.
+    </p>
+
+  </section>
+
+  <!-- TERMS CONTENT -->
+
+  <section class="terms-container">
+
+    <div class="terms-card">
+
+      <p>
+
+        Welcome to <strong>EaseLaw.in</strong> (“Website”, “Platform”, “We”, “Us”, “Our”).
+
+        By accessing or using our services, you (“User”, “You”) agree to comply with these Terms & Conditions.
+
+      </p>
+
+      <h2>1. Nature of Service – No Legal Advice</h2>
+
+      <p>
+        EaseLaw.in is a legal-tech drafting platform that provides automated tools for generating:
+      </p>
+
+      <ul>
+        <li>Legal drafts</li>
+        <li>Documents</li>
+        <li>Templates</li>
+        <li>Translations</li>
+        <li>OCR conversions</li>
+        <li>AI-based summaries</li>
+      </ul>
+
+      <p>
+        EaseLaw.in does NOT provide legal advice, legal opinions, legal representation, advocacy services, or lawyer–client relationships.
+      </p>
+
+      <div class="highlight">
+        All outputs are AI-generated and must be verified by a licensed advocate before use.
+      </div>
+
+      <h2>2. User Eligibility</h2>
+
+      <ul>
+        <li>You must be at least 18 years old.</li>
+        <li>You must have legal capacity under Indian law.</li>
+        <li>You must use the platform lawfully.</li>
+      </ul>
+
+      <h2>3. User Responsibilities</h2>
+
+      <ul>
+        <li>Verify all drafts with a professional advocate.</li>
+        <li>Do not treat AI outputs as legal advice.</li>
+        <li>You are responsible for uploaded information.</li>
+        <li>No illegal or harmful usage is permitted.</li>
+      </ul>
+
+      <h2>4. Accuracy & Content Disclaimer</h2>
+
+      <p>
+        EaseLaw.in does not guarantee:
+      </p>
+
+      <ul>
+        <li>Accuracy of AI-generated drafts</li>
+        <li>Updated legal provisions</li>
+        <li>Correct legal interpretations</li>
+        <li>Court acceptance or enforceability</li>
+      </ul>
+
+      <h2>5. No Liability Clause</h2>
+
+      <p>
+        EaseLaw.in shall not be liable for:
+      </p>
+
+      <ul>
+        <li>Errors in AI-generated content</li>
+        <li>Financial or legal losses</li>
+        <li>Court rejections</li>
+        <li>Translation or OCR inaccuracies</li>
+        <li>Technical failures or downtime</li>
+      </ul>
+
+      <h2>6. Payments & Refund Policy</h2>
+
+      <p>
+        Payments for digital drafting services are generally non-refundable except for duplicate or mistaken transactions.
+      </p>
+
+      <h2>7. Intellectual Property Rights</h2>
+
+      <ul>
+        <li>Users may use drafts for personal/business use.</li>
+        <li>Users may not resell or redistribute platform content.</li>
+        <li>Reverse engineering or scraping is prohibited.</li>
+      </ul>
+
+      <h2>8. Acceptable Use Policy</h2>
+
+      <ul>
+        <li>No abusive or illegal uploads</li>
+        <li>No hacking or exploitation attempts</li>
+        <li>No fraudulent document generation</li>
+      </ul>
+
+      <h2>9. Third-Party Services</h2>
+
+      <p>
+        EaseLaw.in integrates with external services like payment providers, analytics tools, and AI systems.
+      </p>
+
+      <h2>10. Account Security</h2>
+
+      <p>
+        Users are responsible for maintaining account confidentiality and device security.
+      </p>
+
+      <h2>11. Suspension & Termination</h2>
+
+      <p>
+        Accounts may be suspended for misuse, fraud, or policy violations.
+      </p>
+
+      <h2>12. Governing Law & Dispute Resolution</h2>
+
+      <p>
+        These Terms are governed by the laws of India.
+        Jurisdiction shall lie exclusively in Hyderabad / Telangana courts.
+      </p>
+
+      <h2>13. Changes to Terms</h2>
+
+      <p>
+        EaseLaw.in reserves the right to modify these Terms at any time.
+      </p>
+
+      <h2>14. Contact Information</h2>
+
+      <p>
+        📩 Email: easelawindia@gmail.com
+        <br><br>
+        🌐 Website: www.easelaw.in
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>EaseLaw</h2>
+
+    <p>
+      AI-powered legal workspace designed
+      for modern advocates and legal professionals.
+    </p>
+
+    <p style="margin-top:20px;">
+      © 2026 Shantaquant All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+
+</html>

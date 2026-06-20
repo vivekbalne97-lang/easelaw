@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Refund Policy - EaseLaw</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+
+  background:
+  linear-gradient(
+    180deg,
+    #f8f5ff,
+    #ffffff
+  );
+
+  color:#111827;
+
+  line-height:1.8;
+
+  overflow-x:hidden;
+
+  position:relative;
+
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+
+  width:420px;
+  height:420px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(124,58,237,0.14),
+    transparent 70%
+  );
+
+  top:-120px;
+  right:-100px;
+
+  filter:blur(60px);
+
+  z-index:-1;
+
+}
+
+body::after{
+
+  content:"";
+
+  position:fixed;
+
+  width:380px;
+  height:380px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(99,102,241,0.10),
+    transparent 70%
+  );
+
+  bottom:-100px;
+  left:-100px;
+
+  filter:blur(60px);
+
+  z-index:-1;
+
+}
+
+a{
+  text-decoration:none;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+
+  width:100%;
+
+  padding:22px 8%;
+
+  background:
+  rgba(206, 213, 240, 0.92);
+
+  backdrop-filter:blur(18px);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+
+  border-bottom:
+  1px solid rgba(124,58,237,0.08);
+
+  box-shadow:
+  0 10px 30px rgba(124,58,237,0.05);
+
+}
+
+/* LOGO */
+
+.logo{
+
+  font-size:34px;
+
+  font-weight:900;
+
+  color:#111827;
+
+}
+
+.logo span{
+
+  color:#7c3aed;
+
+}
+
+/* BUTTON */
+
+.back-btn{
+
+  padding:13px 24px;
+
+  border-radius:16px;
+
+  border:
+  1px solid rgba(124,58,237,0.10);
+
+  background:
+  rgba(255,255,255,0.88);
+
+  color:#111827;
+
+  font-weight:700;
+
+  transition:0.35s ease;
+
+}
+
+.back-btn:hover{
+
+  border-color:#7c3aed;
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 14px 24px rgba(124,58,237,0.12);
+
+  color:#7c3aed;
+
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+  padding:100px 8% 70px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #0f172a,
+    #111827,
+    #1e1b4b
+  );
+
+  color:white;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+/* HERO GLOW */
+
+.hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:360px;
+  height:360px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(124,58,237,0.18),
+    transparent 70%
+  );
+
+  top:-120px;
+  right:-120px;
+
+  filter:blur(30px);
+
+}
+
+.hero::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:260px;
+  height:260px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(99,102,241,0.14),
+    transparent 70%
+  );
+
+  bottom:-100px;
+  left:-100px;
+
+  filter:blur(20px);
+
+}
+
+/* TITLE */
+
+.hero h1{
+
+  position:relative;
+
+  z-index:2;
+
+  font-size:68px;
+
+  margin-bottom:22px;
+
+  font-weight:900;
+
+}
+
+.hero h1 span{
+
+  background:
+  linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6366f1
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+}
+
+/* TEXT */
+
+.hero p{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:850px;
+
+  color:#d1d5db;
+
+  font-size:19px;
+
+  line-height:1.9;
+
+}
+
+/* =========================
+REFUND SECTION
+========================= */
+
+.refund-container{
+
+  width:100%;
+
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:90px 20px;
+
+  margin-top:-70px;
+
+  position:relative;
+
+  z-index:5;
+
+}
+
+/* CARD */
+
+.refund-card{
+
+  background:
+  rgba(255,255,255,0.88);
+
+  backdrop-filter:blur(20px);
+
+  padding:60px;
+
+  border-radius:34px;
+
+  border:
+  1px solid rgba(124,58,237,0.08);
+
+  box-shadow:
+  0 30px 60px rgba(124,58,237,0.08);
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+/* GLOW */
+
+.refund-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:240px;
+  height:240px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(139,92,246,0.12),
+    transparent 70%
+  );
+
+  top:-80px;
+  right:-80px;
+
+}
+
+/* H2 */
+
+.refund-card h2{
+
+  font-size:32px;
+
+  margin-top:50px;
+
+  margin-bottom:20px;
+
+  color:#111827;
+
+  font-weight:900;
+
+}
+
+.refund-card h2:first-child{
+
+  margin-top:0;
+
+}
+
+/* H3 */
+
+.refund-card h3{
+
+  margin-top:28px;
+
+  margin-bottom:14px;
+
+  color:#7c3aed;
+
+  font-size:22px;
+
+  font-weight:800;
+
+}
+
+/* TEXT */
+
+.refund-card p{
+
+  color:#475569;
+
+  font-size:16px;
+
+  margin-bottom:20px;
+
+  line-height:1.9;
+
+}
+
+/* LIST */
+
+.refund-card ul{
+
+  padding-left:24px;
+
+  margin-bottom:28px;
+
+}
+
+.refund-card ul li{
+
+  margin-bottom:14px;
+
+  color:#475569;
+
+  line-height:1.8;
+
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(124,58,237,0.08),
+    rgba(255,255,255,0.9)
+  );
+
+  border:
+  1px solid rgba(124,58,237,0.12);
+
+  padding:24px;
+
+  border-radius:22px;
+
+  margin-top:28px;
+
+  color:#5b21b6;
+
+  font-weight:600;
+
+  line-height:1.9;
+
+}
+
+/* DANGER BOX */
+
+.danger-box{
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(239,68,68,0.08),
+    rgba(255,255,255,0.92)
+  );
+
+  border:
+  1px solid rgba(239,68,68,0.18);
+
+  padding:24px;
+
+  border-radius:22px;
+
+  margin-top:28px;
+
+  color:#991b1b;
+
+  font-weight:600;
+
+  line-height:1.9;
+
+}
+
+/* FOOTER */
+
+footer{
+
+  background:
+  linear-gradient(
+    135deg,
+    #020617,
+    #111827
+  );
+
+  color:white;
+
+  text-align:center;
+
+  padding:60px 8%;
+
+  margin-top:80px;
+
+  border-top:
+  1px solid rgba(124,58,237,0.12);
+
+}
+
+footer h2{
+
+  font-size:34px;
+
+  margin-bottom:14px;
+
+}
+
+footer p{
+
+  color:#94a3b8;
+
+  line-height:1.9;
+
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:768px){
+
+body{
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    padding:16px 5%;
+}
+
+.logo{
+    font-size:24px;
+}
+
+.back-btn{
+    padding:10px 16px;
+    font-size:13px;
+    border-radius:14px;
+}
+
+/* HERO */
+
+.hero{
+    padding:70px 5% 120px;
+}
+
+.hero h1{
+    font-size:40px;
+    line-height:1.15;
+    margin-bottom:16px;
+}
+
+.hero p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+/* REFUND SECTION */
+
+.refund-container{
+    padding:0 15px 50px;
+    margin-top:-70px;
+}
+
+/* CARD */
+
+.refund-card{
+    padding:28px 22px;
+    border-radius:28px;
+}
+
+/* H2 */
+
+.refund-card h2{
+    font-size:24px;
+    margin-top:35px;
+    margin-bottom:16px;
+}
+
+/* H3 */
+
+.refund-card h3{
+    font-size:18px;
+    margin-top:24px;
+}
+
+/* TEXT */
+
+.refund-card p{
+    font-size:14px;
+    line-height:1.9;
+}
+
+/* LIST */
+
+.refund-card ul{
+    padding-left:18px;
+}
+
+.refund-card ul li{
+    font-size:14px;
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+/* HIGHLIGHT BOX */
+
+.highlight,
+.danger-box{
+
+    padding:18px;
+
+    border-radius:18px;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px 5%;
+}
+
+footer h2{
+    font-size:28px;
+}
+
+footer p{
+    font-size:14px;
+    line-height:1.8;
+}
+
+}
+
+/* =====================================
+SMALL PHONES
+===================================== */
+
+@media screen and (max-width:480px){
+
+.navbar{
+    flex-direction:column;
+    gap:14px;
+}
+
+.logo{
+    font-size:22px;
+}
+
+.back-btn{
+    width:100%;
+    text-align:center;
+}
+
+.hero{
+    padding:60px 5% 100px;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+.refund-container{
+    margin-top:-55px;
+}
+
+.refund-card{
+    padding:22px 18px;
+}
+
+.refund-card h2{
+    font-size:21px;
+}
+
+.refund-card h3{
+    font-size:17px;
+}
+
+.refund-card p,
+.refund-card ul li{
+    font-size:13px;
+}
+
+.highlight,
+.danger-box{
+    padding:16px;
+    font-size:13px;
+}
+
+footer h2{
+    font-size:24px;
+}
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+    <div class="logo">
+      Ease<span>Law</span>
+    </div>
+
+    <a href="index.html" class="back-btn">
+      ← Back to Home
+    </a>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>
+      Refund Policy
+    </h1>
+
+    <p>
+      Please review our refund policy carefully before purchasing services or subscriptions on EaseLaw.in.
+    </p>
+
+  </section>
+
+  <!-- CONTENT -->
+
+  <section class="refund-container">
+
+    <div class="refund-card">
+
+      <h2>Refund Policy</h2>
+
+      <p>
+        EaseLaw.in provides digital legal-drafting services. Since all services are instantly accessible upon purchase, most payments are non-refundable.
+      </p>
+
+      <div class="danger-box">
+        Digital services become accessible immediately after purchase. Therefore, refunds are restricted except in limited exceptional circumstances.
+      </div>
+
+      <h2>A. Non-Refundable Services</h2>
+
+      <p>
+        Payments cannot be refunded for:
+      </p>
+
+      <ul>
+
+        <li>AI-generated drafts</li>
+
+        <li>OCR / translation services</li>
+
+        <li>Subscription plans</li>
+
+        <li>Credits purchased</li>
+
+        <li>User mistakes in entered details</li>
+
+        <li>Dissatisfaction with AI output</li>
+
+        <li>Change of mind</li>
+
+        <li>Unused subscription period</li>
+
+      </ul>
+
+      <h2>B. Refunds Allowed (Exceptional Cases Only)</h2>
+
+      <p>
+        Refunds may be granted only for:
+      </p>
+
+      <ul>
+
+        <li>Accidental duplicate payment</li>
+
+        <li>Incorrect payment made to EaseLaw by mistake</li>
+
+        <li>Technical failure where service was NOT delivered</li>
+
+      </ul>
+
+      <div class="highlight">
+
+        To request a refund:
+        <br><br>
+
+        📩 Email: support@easelaw.in
+        <br><br>
+
+        Please provide:
+        <br>
+
+        • Name
+        <br>
+
+        • Phone Number
+        <br>
+
+        • Email Address
+        <br>
+
+        • Order ID
+        <br>
+
+        • Payment Proof
+        <br>
+
+        • Reason for refund request
+
+      </div>
+
+      <h2>Refund Processing Time</h2>
+
+      <p>
+        Refund requests are reviewed by our support team and may take approximately 7–14 business days for processing.
+      </p>
+
+      <p>
+        Refund approval is completely at the discretion of EaseLaw.in.
+      </p>
+
+      <h2>C. No Cash Refunds</h2>
+
+      <p>
+        Refunds are issued only through the original payment method used during the transaction (Razorpay / PayU).
+      </p>
+
+      <div class="danger-box">
+        EaseLaw.in reserves the right to deny refund requests that do not satisfy the eligibility conditions mentioned above.
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>EaseLaw</h2>
+
+    <p>
+      AI-powered legal workspace designed
+      for modern advocates and legal professionals.
+    </p>
+
+    <p style="margin-top:20px;">
+      © 2026 Shantaquant All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+
+</html>

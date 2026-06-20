@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EaseLaw - AI Legal Workspace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <!-- LOGO -->
+    <div class="logo">
+  <span>Ease</span>Law
+</div>
+
+    <!-- MENU -->
+    <div class="menu-group">
+
+      <a href="#" class="menu-item active">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-window-maximize"></i>
+        <span>Dashboard</span>
+      </a>
+    </div>
+    <div class="divider"></div>
+
+    <!-- TOOLS -->
+    <p class="menu-title">TOOLS</p>
+
+    <div class="menu-group">
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-pen-to-square"></i>
+        <span>Legal Drafting</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-file-lines"></i>
+        <span>Agreements & Complaints</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-solid fa-microphone-lines"></i>
+        <span>AI Voice & OCR Tools</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-solid fa-language"></i>
+        <span>Translation & Conversion</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>Court & Legal Utilities</span>
+      </a>
+    </div>
+    <div class="divider"></div>
+
+    <!-- BOTTOM MENU -->
+    <div class="menu-group">
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-file"></i>
+        <span>My Documents</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-star"></i>
+        <span>Favorites</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-clock"></i>
+        <span>History</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-circle-question"></i>
+        <span>Help & Support</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-solid fa-gear"></i>
+        <span>Settings</span>
+      </a>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="premium-card">
+
+      <div class="premium-icon">
+        <i class="fa-solid fa-crown"></i>
+      </div>
+
+      <h3>Unlock Premium</h3>
+
+      <p>
+        Get unlimited access to all premium tools and features.
+      </p>
+      <button>Upgrade Now</button>
+    </div>
+  </aside>
+ 
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+  <!-- LEFT SIDE -->
+  <div class="nav-left">
+
+    <!-- MENU BUTTON -->
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- LOGO -->
+    <div class="logo">
+      <span>Ease</span>Law
+    </div>
+
+  </div>
+
+  <!-- CENTER LINKS -->
+  <div class="nav-links">
+
+    <a href="index.html">Home</a>
+    <a href="court.html">Court Forms</a>
+    <a href="consult.html">Consult Advocate</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="nav-right">
+
+    <div class="profile-btn">
+
+      <img
+      src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+      alt=""
+      >
+
+      <span>Login</span>
+
+    </div>
+
+  </div>
+
+</nav>
+<!-- HERO -->
+
+<section class="hero">
+
+
+<div class="hero-right">
+
+<div class="dashboard">
+
+<div class="dashboard-header">
+
+<h3>AI Legal Dashboard</h3>
+
+<div class="badge">
+AI ACTIVE
+</div>
+
+</div>
+
+<div class="card-grid">
+
+<a href="drafting.html" class="mini-card-link">
+
+  <div class="mini-card">
+
+    <div class="mini-icon">
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+    </div>
+
+    <div class="mini-content">
+
+      <h3>AI Drafting</h3>
+
+      <p>
+        Generate legal drafts instantly using AI.
+      </p>
+
+    </div>
+
+  </div>
+
+</a>
+
+<a href="actsearch.html" class="mini-card-link">
+
+  <div class="mini-card">
+
+    <div class="mini-icon">
+      <i class="fa-solid fa-scale-balanced"></i>
+    </div>
+
+    <div class="mini-content">
+
+      <h3>Act Search</h3>
+
+      <p>
+        Search Indian Acts and legal provisions instantly.
+      </p>
+
+    </div>
+
+  </div>
+
+</a>
+
+<a href="voice.html" class="mini-card-link">
+
+  <div class="mini-card">
+
+    <div class="mini-icon">
+      <i class="fa-solid fa-microphone-lines"></i>
+    </div>
+
+    <div class="mini-content">
+
+      <h3>AI Voice</h3>
+
+      <p>
+        Convert speech into legal text using AI transcription.
+      </p>
+    </div>
+
+  </div>
+
+</a>
+
+<a href="casemanagement.html" class="mini-card-link">
+
+  <div class="mini-card">
+
+    <div class="mini-icon">
+      <i class="fa-solid fa-file-pdf"></i>
+    </div>
+
+    <div class="mini-content">
+
+      <h3>Case Tracker</h3>
+
+      <p>
+        Track  hearings and legal workflow.
+      </p>
+
+    </div>
+
+  </div>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="section-title">
+
+<h2>Everything Advocates Need</h2>
+
+<p>
+EaseLaw combines modern AI technology with professional legal workflows.
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<div class="icon">⚖</div>
+
+<h3>Legal Drafting</h3>
+
+<p>Create professional drafts instantly.</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">📂</div>
+
+<h3>Case Management</h3>
+
+<p>Manage clients and hearings efficiently.</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">🔍</div>
+
+<h3>Bare Act Search</h3>
+
+<p>Find legal references instantly.</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">🤖</div>
+
+<h3>AI Legal Assistant</h3>
+
+<p>AI-powered legal workflow assistance.</p>
+
+</div>
+
+</section>
+ 
+<!-- =========================
+POPULAR TOOLS
+========================= -->
+
+<section class="popular-tools">
+
+  <!-- HEADING -->
+
+  <div class="tools-heading">
+
+    <h2>Popular Tools</h2>
+
+    <p>Most used tools by our users</p>
+
+  </div>
+
+  <!-- TOOLS GRID -->
+
+  <div class="tools-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="tool-card">
+
+      <div class="tool-icon violet">
+        <i class="fa-solid fa-scale-balanced"></i>
+      </div>
+
+      <h3>Legal Notice</h3>
+
+      <p>
+        Create professional legal notices instantly.
+      </p>
+
+      <button>Use Now</button>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="tool-card">
+
+      <div class="tool-icon blue">
+        <i class="fa-solid fa-feather-pointed"></i>
+      </div>
+
+      <h3>Petition Drafting</h3>
+
+      <p>
+        Draft petitions for various legal matters.
+      </p>
+
+      <button>Use Now</button>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="tool-card">
+
+      <div class="tool-icon green">
+        <i class="fa-solid fa-house"></i>
+      </div>
+
+      <h3>Rental Agreement</h3>
+
+      <p>
+        Create a valid rental agreement easily.
+      </p>
+
+      <button>Use Now</button>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="tool-card">
+
+      <div class="tool-icon orange">
+        <i class="fa-regular fa-file-pdf"></i>
+      </div>
+
+      <h3>PDF to Text (OCR)</h3>
+
+      <p>
+        Extract text from PDF documents.
+      </p>
+
+      <button>Use Now</button>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="tool-card">
+
+      <div class="tool-icon pink">
+        <i class="fa-solid fa-microphone-lines"></i>
+      </div>
+
+      <h3>Audio Transcription</h3>
+
+      <p>
+        Convert audio files into text.
+      </p>
+
+      <button>Use Now</button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+ALL TOOLS SECTION
+========================= -->
+
+<section class="all-tools-section">
+
+  <!-- TOP -->
+
+  <div class="all-tools-top">
+
+    <h2>Tools at Glance</h2>
+
+  </div>
+
+  <!-- TOOLS GRID -->
+
+  <div class="all-tools-grid">
+
+    <!-- COLUMN 1 -->
+
+    <div class="tools-column violet-border">
+
+      <h3>
+        <i class="fa-solid fa-scale-balanced"></i>
+        Legal Drafting 
+      </h3>
+      <ul>
+        <li>Petition Drafting</li>
+        <li>Counter Reply</li>
+        <li>Affidavit Draft</li>
+        <li>RTI Draft</li>
+        <li>Legal Notice</li>
+        <li>Reply to Legal Notice</li>
+        <li>High Court Petition</li>
+      </ul>
+    </div>
+    <!-- COLUMN 2 -->
+
+    <div class="tools-column green-border">
+
+      <h3>
+        <i class="fa-solid fa-house"></i>
+        Agreements & Complaints 
+      </h3>
+
+      <ul>
+
+        <li>Rental Agreement</li>
+        <li>Consumer Complaint</li>
+        <li>Consumer Memo</li>
+        <li>Consumer Counter</li>
+
+      </ul>
+
+    </div>
+
+    <!-- COLUMN 3 -->
+
+    <div class="tools-column blue-border">
+
+      <h3>
+        <i class="fa-solid fa-microphone-lines"></i>
+        AI Voice & OCR Tools 
+      </h3>
+      <ul>
+
+        <li>PDF to Text (OCR)</li>
+        <li>Speech to Text</li>
+        <li>Audio Transcription</li>
+        <li>Multi-Language OCR</li>
+
+      </ul>
+
+    </div>
+
+    <!-- COLUMN 4 -->
+
+    <div class="tools-column orange-border">
+
+      <h3>
+        <i class="fa-solid fa-language"></i>
+        Translation & Conversion 
+      </h3>
+
+      <ul>
+
+        <li>161 CrPC Telugu to English</li>
+        <li>Telugu to English Translation</li>
+        <li>PDF Conversion</li>
+
+      </ul>
+
+    </div>
+
+    <!-- COLUMN 5 -->
+
+    <div class="tools-column cyan-border">
+
+      <h3>
+        <i class="fa-solid fa-building-columns"></i>
+        Court & Legal Utilities
+      </h3>
+
+      <ul>
+
+        <li>Court Fee Calculator</li>
+        <li>Legal Utilities</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="report-section">
+
+    <div class="report-header">
+        <h2>Live Performance Reports</h2>
+        <p>
+            Real-time metrics showing EaseLaw's efficiency and adoption.
+        </p>
+    </div>
+
+    <div class="report-grid">
+
+        <div class="report-card">
+            <div class="report-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+
+            <h3>10K+</h3>
+            <p>Generated Drafts</p>
+        </div>
+
+        <div class="report-card">
+            <div class="report-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <h3>5K+</h3>
+            <p>Clients Visited</p>
+        </div>
+
+        <div class="report-card">
+            <div class="report-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <h3>99%</h3>
+            <p>Workflow Accuracy</p>
+        </div>
+
+        <div class="report-card">
+            <div class="report-icon">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+
+            <h3>24/7</h3>
+            <p>AI Assistance</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-top">
+
+<div class="footer-brand">
+  <h2><span>Ease</span>Law</h2>
+  <p>
+    AI-powered legal workspace for modern advocates and legal professionals.
+  </p>
+  
+  <div class="social-links">
+    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+</div>  
+
+<div class="footer-links">
+
+<h4>Company</h4>
+
+<a href="index.html">Home</a>
+<a href="consult.html">Advocates</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="footer-links">
+
+<h4>Legal</h4>
+
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms & Conditions</a>
+<a href="refund.html">Refund Policy</a>
+</div>
+</div>
+<div class="copyright">
+© 2026 Shantaquant Technologies. All Rights Reserved.
+</div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+
+function openSidebar() {
+  sidebar.classList.add("active");
+  overlay.classList.add("show");
+  document.documentElement.style.overflow = "hidden";
+  document.body.style.overflow = "hidden";
+  sidebar.scrollTop = 0;
+}
+
+function closeSidebar() {
+  sidebar.classList.remove("active");
+  overlay.classList.remove("show");
+  document.documentElement.style.overflow = "";
+  document.body.style.overflow = "";
+}
+
+function toggleSidebar() {
+  if (sidebar.classList.contains("active")) {
+    closeSidebar();
+  } else {
+    openSidebar();
+  }
+}
+
+if (menuToggle && sidebar && overlay) {
+  menuToggle.addEventListener("click", toggleSidebar);
+  overlay.addEventListener("click", closeSidebar);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeSidebar();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      closeSidebar();
+    }
+  });
+}
+</script>
+</body>
+</html>

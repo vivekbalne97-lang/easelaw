@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EaseLaw - AI Voice</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+/* =========================
+GLOBAL
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+
+  background:
+  linear-gradient(
+    180deg,
+    #f5f3ff,
+    #ffffff
+  );
+
+  padding:50px 20px;
+
+  color:#111827;
+
+  overflow-x:hidden;
+
+  position:relative;
+
+}
+a{
+  text-decoration:none;
+}  
+.navbar{
+
+  position:fixed;
+  top:18px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:94%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:16px 24px;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(5,8,22,0.92),
+    rgba(15,23,42,0.82)
+  );
+
+  backdrop-filter:blur(24px);
+
+  border:1px solid rgba(255,255,255,0.06);
+
+  border-radius:24px;
+
+  z-index:999;
+
+  box-shadow:
+  0 10px 40px rgba(0,0,0,0.35);
+
+}
+/* =========================
+NAV LEFT
+========================= */
+
+.nav-left{
+
+  display:flex;
+  align-items:center;
+  gap:18px;
+
+}
+
+/* MENU BUTTON */
+
+.menu-toggle{
+
+  width:52px;
+  height:52px;
+
+  border:none;
+
+  border-radius:16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(255,255,255,0.06);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(18px);
+
+  color:white;
+
+  font-size:20px;
+
+  cursor:pointer;
+
+  transition:0.35s;
+
+}
+
+.menu-toggle:hover{
+
+  transform:translateY(-3px);
+
+  border-color:rgba(139,92,246,0.25);
+
+  background:rgba(255,255,255,0.09);
+
+}
+.nav-left{
+
+  display:flex;
+  align-items:center;
+  gap:18px;
+
+}
+.logo{
+
+  font-size:30px;
+  font-weight:900;
+
+  color:white;
+
+  letter-spacing:-1px;
+
+}
+
+.logo span{
+  color:#8b5cf6;
+}
+
+.nav-links{
+
+  display:flex;
+  align-items:center;
+  gap:34px;
+
+}
+
+.nav-links a{
+
+  position:relative;
+
+  color:#cbd5e1;
+
+  font-size:15px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+
+}
+
+.nav-links a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-8px;
+
+  width:0%;
+  height:2px;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #7c3aed,
+    #8b5cf6
+  );
+
+  transition:0.35s;
+
+}
+
+.nav-links a:hover{
+  color:white;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+.nav-right{
+
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+}
+
+/* MENU BUTTON */
+.menu-toggle{
+
+  width:52px;
+  height:52px;
+
+  border:none;
+
+  border-radius:16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  /* CHANGE THIS COLOR */
+background:rgba(255,255,255,0.12);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  color:white;
+
+  font-size:22px;
+
+  cursor:pointer;
+
+  transition:0.5s;
+
+  box-shadow:
+  0 8px 20px rgba(93, 26, 207, 0.679);
+
+}
+
+/* LOGIN BUTTON */
+
+.profile-btn{
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:8px 16px 8px 8px;
+
+  border-radius:50px;
+
+  background:rgba(255,255,255,0.06);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(18px);
+
+  cursor:pointer;
+
+  transition:0.35s;
+
+}
+
+.profile-btn:hover{
+
+  transform:translateY(-3px);
+
+  border-color:rgba(139,92,246,0.25);
+
+  background:rgba(255,255,255,0.08);
+
+}
+
+.profile-btn img{
+
+  width:40px;
+  height:40px;
+
+  border-radius:50%;
+
+}
+
+.profile-btn span{
+
+  color:white;
+
+  font-weight:700;
+
+  font-size:15px;
+
+}
+
+/* =========================
+SIDEBAR
+========================= */
+
+/* SIDEBAR */
+
+.sidebar{
+
+  position:fixed;
+
+  top:0;
+  left:-340px;
+
+  width:310px;
+  height:100vh;
+
+  background:
+  linear-gradient(
+    180deg,
+    rgba(255,255,255,0.98),
+    rgba(247,244,255,0.98)
+    );
+    
+  backdrop-filter:blur(30px);
+
+  border-right:
+  1px solid rgba(124,58,237,0.08);
+
+  padding:22px 18px;
+  
+  overflow-y:auto;
+  
+  transition:0.4s ease;
+  
+  z-index: 10000;
+  
+  box-shadow:
+  0 30px 60px rgba(15,23,42,0.16);
+  
+}
+
+/* OVERLAY */
+
+.overlay{
+
+  position:fixed;
+  inset:0;
+
+  background:rgba(2,6,23,0.45);
+
+  backdrop-filter:blur(6px);
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:0.35s ease;
+
+  z-index:9998;
+
+}
+
+.overlay.show{
+
+  opacity:1;
+  visibility:visible;
+
+}
+
+/* OPEN */
+
+.sidebar.active{
+  left:0;
+}
+
+/* LOGO */
+
+.sidebar .logo{
+
+  font-size:32px;
+  font-weight:900;
+
+  color:#111827;
+
+  margin-bottom:30px;
+
+}
+
+.sidebar .logo span{
+  color:#7c3aed;
+}
+
+/* MENU GROUP */
+
+.menu-group{
+
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+
+}
+
+/* TITLE */
+
+.menu-title{
+
+  font-size:12px;
+
+  font-weight:800;
+
+  color:#8b5cf6;
+
+  letter-spacing:1.5px;
+
+  margin-bottom:14px;
+
+  padding-left:10px;
+
+}
+
+/* MENU ITEM */
+
+.menu-item{
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+  padding:15px 16px;
+
+  border-radius:18px;
+
+  color:#334155;
+
+  font-size:15px;
+  font-weight:700;
+
+  transition:0.35s ease;
+
+}
+
+/* ICON */
+
+.menu-item i{
+
+  width:20px;
+
+  font-size:18px;
+
+}
+
+/* HOVER */
+
+.menu-item:hover{
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(124,58,237,0.12),
+    rgba(255,255,255,0.9)
+  );
+
+  color:#6d28d9;
+
+  transform:translateX(3px);
+
+}
+
+/* ACTIVE */
+
+.menu-item.active{
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(124,58,237,0.16),
+    rgba(139,92,246,0.08)
+  );
+
+  color:#6d28d9;
+
+}
+
+.menu-item.active::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:12px;
+
+  width:4px;
+  height:32px;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+    180deg,
+    #7c3aed,
+    #8b5cf6
+  );
+
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+
+  width:400px;
+  height:400px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(124,58,237,0.15),
+    transparent 70%
+  );
+
+  top:-120px;
+  right:-100px;
+
+  filter:blur(60px);
+
+  z-index:-1;
+
+}
+
+/* =========================
+MAIN CONTAINER
+========================= */
+.voice-container{
+
+  max-width:1200px;
+
+  margin:140px auto 0;
+
+  background:
+  rgba(255,255,255,0.92);
+
+  backdrop-filter:blur(18px);
+
+  border-radius:34px;
+
+  padding:50px;
+
+  border:
+  1px solid rgba(124,58,237,0.08);
+
+  box-shadow:
+  0 30px 60px rgba(124,58,237,0.08);
+
+}
+
+/* =========================
+HEADER
+========================= */
+
+.header{
+
+  text-align:center;
+
+  margin-bottom:50px;
+
+}
+
+.header h1{
+
+  font-size:52px;
+
+  font-weight:900;
+
+  margin-bottom:14px;
+
+}
+
+.header h1 span{
+
+  color:#7c3aed;
+
+}
+
+.header p{
+
+  color:#64748b;
+
+  font-size:17px;
+
+  line-height:1.8;
+
+  max-width:750px;
+
+  margin:auto;
+
+}
+
+/* =========================
+AI BADGE
+========================= */
+
+.ai-badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  padding:12px 18px;
+
+  border-radius:50px;
+
+  background:
+  rgba(124,58,237,0.08);
+
+  color:#7c3aed;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  margin-bottom:22px;
+
+}
+
+.ai-dot{
+
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#22c55e;
+
+  box-shadow:
+  0 0 10px #22c55e;
+
+  animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.4);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
+
+/* =========================
+VOICE CARD
+========================= */
+
+.voice-card{
+
+  background:
+  linear-gradient(
+    180deg,
+    rgba(255,255,255,0.95),
+    rgba(245,240,255,0.96)
+  );
+
+  border:
+  1px solid rgba(124,58,237,0.08);
+
+  border-top:
+  4px solid #8b5cf6;
+
+  border-radius:30px;
+
+  padding:40px;
+
+  text-align:center;
+
+}
+
+/* ICON */
+
+.voice-icon{
+
+  width:110px;
+  height:110px;
+
+  border-radius:30px;
+
+  margin:auto;
+
+  margin-bottom:30px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(124,58,237,0.18),
+    rgba(139,92,246,0.08)
+  );
+
+  color:#7c3aed;
+
+  font-size:44px;
+
+  box-shadow:
+  0 20px 40px rgba(124,58,237,0.12);
+
+}
+
+/* RECORD BUTTON */
+
+.record-btn{
+
+  margin-top:35px;
+
+  padding:18px 34px;
+
+  border:none;
+
+  border-radius:22px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #7c3aed,
+    #8b5cf6
+  );
+
+  color:white;
+
+  font-size:17px;
+
+  font-weight:800;
+
+  cursor:pointer;
+
+  transition:0.35s ease;
+
+  box-shadow:
+  0 20px 30px rgba(124,58,237,0.18);
+
+}
+
+.record-btn:hover{
+
+  transform:translateY(-4px);
+
+}
+
+/* =========================
+UPLOAD AREA
+========================= */
+
+.upload-area{
+
+  margin-top:40px;
+
+  border:
+  2px dashed rgba(124,58,237,0.18);
+
+  border-radius:28px;
+
+  padding:50px 20px;
+
+  text-align:center;
+
+  background:
+  rgba(248,245,255,0.8);
+
+}
+
+.upload-area i{
+
+  font-size:54px;
+
+  color:#7c3aed;
+
+  margin-bottom:18px;
+
+}
+
+.upload-area h3{
+
+  font-size:28px;
+
+  margin-bottom:14px;
+
+}
+
+.upload-area p{
+
+  color:#64748b;
+
+  margin-bottom:25px;
+
+}
+
+/* UPLOAD BUTTON */
+
+.upload-btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:18px 28px;
+
+  border-radius:22px;
+
+  cursor:pointer;
+
+  font-size:15px;
+
+  font-weight:800;
+
+  color:white;
+
+  background:
+  linear-gradient(
+    135deg,
+    #111827,
+    #1e1b4b
+  );
+
+  transition:0.35s ease;
+
+}
+
+.upload-btn:hover{
+
+  transform:translateY(-4px);
+
+  background:
+  linear-gradient(
+    135deg,
+    #7c3aed,
+    #8b5cf6
+  );
+
+}
+
+/* =========================
+TRANSCRIPT
+========================= */
+
+.transcript-box{
+
+  margin-top:40px;
+
+}
+
+.transcript-box textarea{
+
+  width:100%;
+
+  min-height:240px;
+
+  border-radius:24px;
+
+  border:
+  1px solid rgba(124,58,237,0.10);
+
+  background:
+  rgba(248,245,255,0.8);
+
+  padding:22px;
+
+  font-size:15px;
+
+  resize:none;
+
+  outline:none;
+
+}
+
+.transcript-box textarea:focus{
+
+  border-color:#7c3aed;
+
+  background:white;
+
+  box-shadow:
+  0 0 0 4px rgba(124,58,237,0.08);
+
+}
+
+/* =========================
+ACTION BUTTONS
+========================= */
+
+.action-buttons{
+
+  display:flex;
+
+  gap:18px;
+
+  margin-top:30px;
+
+  flex-wrap:wrap;
+
+}
+
+.action-btn{
+
+  flex:1;
+
+  min-width:220px;
+
+  padding:18px;
+
+  border:none;
+
+  border-radius:22px;
+
+  cursor:pointer;
+
+  font-size:16px;
+
+  font-weight:800;
+
+  transition:0.35s ease;
+
+}
+
+.generate-btn{
+
+  background:
+  linear-gradient(
+    135deg,
+    #7c3aed,
+    #8b5cf6
+  );
+
+  color:white;
+
+}
+
+.download-btn{
+
+  background:
+  linear-gradient(
+    135deg,
+    #111827,
+    #1e1b4b
+  );
+
+  color:white;
+
+}
+
+.action-btn:hover{
+
+  transform:translateY(-4px);
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media screen and (max-width:768px){
+
+body{
+    padding:20px 10px;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    width:95%;
+
+    top:12px;
+
+    padding:12px 15px;
+
+    border-radius:20px;
+
+}
+
+.logo{
+
+    font-size:20px;
+
+}
+
+.nav-links{
+
+    display:none;
+
+}
+
+.nav-left{
+
+    gap:14px;
+
+}
+
+.menu-toggle{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:14px;
+
+    font-size:18px;
+
+}
+
+.profile-btn{
+
+    width:46px;
+
+    height:46px;
+
+    padding:0;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+}
+
+.profile-btn span{
+
+    display:none;
+
+}
+
+.profile-btn img{
+
+    width:34px;
+
+    height:34px;
+
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+    width:280px;
+
+    height:100dvh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+.premium-card{
+
+    margin-top:auto;
+
+}
+
+/* MAIN CARD */
+
+.voice-container{
+
+    margin-top:105px;
+
+    padding:28px 18px;
+
+    border-radius:28px;
+
+}
+
+/* HEADER */
+
+.header{
+
+    margin-bottom:35px;
+
+}
+
+.ai-badge{
+
+    padding:10px 16px;
+
+    font-size:13px;
+
+}
+
+.header h1{
+
+    font-size:34px;
+
+}
+
+.header p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+/* VOICE CARD */
+
+.voice-card{
+
+    padding:28px 20px;
+
+    border-radius:26px;
+
+}
+
+/* ICON */
+
+.voice-icon{
+
+    width:80px;
+
+    height:80px;
+
+    font-size:32px;
+
+    border-radius:24px;
+
+    margin-bottom:24px;
+
+}
+
+/* HEADING */
+
+.voice-card h2{
+
+    font-size:24px;
+
+}
+
+/* RECORD BUTTON */
+
+.record-btn{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:16px;
+
+    font-size:15px;
+
+    border-radius:18px;
+
+}
+
+/* TEXTAREA */
+
+.transcript-box textarea{
+
+    min-height:180px;
+
+    padding:18px;
+
+    font-size:14px;
+
+    border-radius:20px;
+
+}
+
+/* BUTTONS */
+
+.action-buttons{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.action-btn{
+
+    min-width:100%;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    font-size:15px;
+
+}
+
+}
+</style>
+
+</head>
+
+<body>
+  <!-- SIDEBAR -->
+  
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <!-- LOGO -->
+    <div class="logo">
+  <span>Ease</span>Law
+</div>
+
+    <!-- MENU -->
+    <div class="menu-group">
+
+      <a href="#" class="menu-item active">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-window-maximize"></i>
+        <span>Dashboard</span>
+      </a>
+    </div>
+    <div class="divider"></div>
+
+    <!-- TOOLS -->
+    <p class="menu-title">TOOLS</p>
+
+    <div class="menu-group">
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-pen-to-square"></i>
+        <span>Legal Drafting</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-file-lines"></i>
+        <span>Agreements & Complaints</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-solid fa-microphone-lines"></i>
+        <span>AI Voice & OCR Tools</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-solid fa-language"></i>
+        <span>Translation & Conversion</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>Court & Legal Utilities</span>
+      </a>
+    </div>
+    <div class="divider"></div>
+
+    <!-- BOTTOM MENU -->
+    <div class="menu-group">
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-file"></i>
+        <span>My Documents</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-star"></i>
+        <span>Favorites</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-clock"></i>
+        <span>History</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-regular fa-circle-question"></i>
+        <span>Help & Support</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="fa-solid fa-gear"></i>
+        <span>Settings</span>
+      </a>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="premium-card">
+
+      <div class="premium-icon">
+        <i class="fa-solid fa-crown"></i>
+      </div>
+
+      <h3>Unlock Premium</h3>
+
+      <p>
+        Get unlimited access to all premium tools and features.
+      </p>
+      <button>Upgrade Now</button>
+    </div>
+  </aside>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+  <!-- LEFT SIDE -->
+  <div class="nav-left">
+
+    <!-- MENU BUTTON -->
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- LOGO -->
+    <div class="logo">
+      <span>Ease</span>Law
+    </div>
+
+  </div>
+
+  <!-- CENTER LINKS -->
+  <div class="nav-links">
+
+    <a href="index.html">Home</a>
+    <a href="court.html">Court Forms</a>
+    <a href="consult.html">Consult Advocate</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="nav-right">
+
+    <div class="profile-btn">
+
+      <img
+      src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+      alt=""
+      >
+
+      <span>Login</span>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<div class="voice-container">
+
+  <!-- HEADER -->
+
+  <div class="header">
+
+    <div class="ai-badge">
+
+      <div class="ai-dot"></div>
+
+      AI Voice Assistant
+
+    </div>
+
+    <h1>
+
+      AI Voice
+      <span>Transcription</span>
+
+    </h1>
+
+    <p>
+
+      Convert legal speech, court discussions,
+      advocate notes and audio recordings
+      into editable legal documents instantly.
+
+    </p>
+
+  </div>
+
+  <!-- VOICE CARD -->
+
+  <div class="voice-card">
+
+    <div class="voice-icon">
+
+      <i class="fa-solid fa-microphone-lines"></i>
+
+    </div>
+
+    <h2>Start Voice Recording</h2>
+
+    <p style="
+    color:#64748b;
+    margin-top:12px;
+    line-height:1.8;
+    ">
+
+      Record legal discussions or upload audio files
+      for instant AI transcription.
+
+    </p>
+
+    <button class="record-btn">
+
+      <i class="fa-solid fa-microphone"></i>
+
+      Start Recording
+
+    </button>
+
+    <!-- TRANSCRIPT -->
+
+    <div class="transcript-box">
+
+      <textarea
+      placeholder="AI transcription will appear here..."
+      ></textarea>
+
+    </div>
+
+    <!-- BUTTONS -->
+
+    <div class="action-buttons">
+
+      <button class="action-btn generate-btn">
+
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+        Generate Legal Draft
+
+      </button>
+
+      <button class="action-btn download-btn">
+
+        <i class="fa-solid fa-download"></i>
+
+        Download Transcript
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+
+menuToggle.addEventListener("click", () => {
+
+  sidebar.classList.toggle("active");
+  overlay.classList.toggle("show");
+
+});
+overlay.addEventListener("click", () => {
+
+  sidebar.classList.remove("active");
+  overlay.classList.remove("show");
+});
+       </script>
+</body>
+</html>
